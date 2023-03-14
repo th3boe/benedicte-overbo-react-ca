@@ -21,7 +21,7 @@ function Nav() {
     return (
       <header className="fixed-top">
         <div className="nav-logo">
-        <img className="App-logo" src={Logo} alt="Logo" />
+        <img className="logo" src={Logo} alt="Logo" />
         <Nav />
         </div>
       </header>
