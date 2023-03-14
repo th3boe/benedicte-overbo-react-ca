@@ -5,7 +5,7 @@
   }
 
   header {
-    border-bottom: solid 1px #208888;
+    border-bottom: 1px solid #208888;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
     padding: 10px;
     background-color: #116161;

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Logo from '../../../images/logo.png'
+import Search from '../../Search';
 import '../Header/header.m.css'
 
 function Nav() {
@@ -20,6 +21,7 @@ function Nav() {
   export default function Header() {
     return (
       <header className="fixed-top">
+        <Search />
         <div className="nav-logo">
         <img className="logo" src={Logo} alt="Logo" />
         <Nav />
