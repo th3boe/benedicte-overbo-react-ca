@@ -1,14 +1,13 @@
-import { Form } from "react-router-dom";
+import './search.m.css'
 
 export default function Search() {
     return (
-        <Form>
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="ms-2 search-size"
-            aria-label="search"
-          />
-        </Form>
-      );
+      <div>
+        <input
+          type='search'
+          placeholder='Search for a product.. '
+          className='search-size'
+        ></input>
+      </div>
+    );
 }
