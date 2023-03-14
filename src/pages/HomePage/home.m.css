@@ -1,0 +1,43 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0px auto;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: #116161;
+    border: 1px solid rgb(38, 141, 141);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.card-header {
+    font-size: 22px;
+    font-weight: 400;
+    border-bottom: 1px solid rgb(38, 141, 141);
+    border-radius: 10px 10px 0px 0px;
+    background-color: #0f5959;
+    padding: 8px;
+    margin: 0;
+}
+  
+.product-image {
+    max-width: 200px;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.before-discount {
+    text-decoration: line-through;
+    margin-bottom: 0px;
+}
+  
+.discount {
+    color: rgb(61, 194, 61);
+}
