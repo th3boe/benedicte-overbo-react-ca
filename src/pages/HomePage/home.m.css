@@ -41,3 +41,37 @@
 .discount {
     color: rgb(61, 194, 61);
 }
+
+/* loader and error */
+
+.loader {
+    margin: auto;
+    border: 10px solid rgb(38, 141, 141);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
+    border-radius: 50%;
+    border-top: 15px solid #116161;
+    width: 100px;
+    height: 100px;
+    animation: spinner 4s linear infinite;
+}
+  
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 380px;
+    color: rgb(116, 8, 8);
+    background-color: rgba(148, 5, 5, 0.303);
+    border: 1px solid rgb(116, 8, 8);
+    box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
+    border-radius: 8px;
+}

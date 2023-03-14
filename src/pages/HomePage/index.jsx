@@ -44,16 +44,14 @@ export default function HomePage() {
 
     if(Loader) {
         return (
-            <div>
-                Add loader..
-            </div>
+            <div className='loader'></div>
         )
     }
 
     if(UpsError) {
         return (
-            <div>
-                Add error message!
+            <div className='error-message'>
+                Oh no.. There seems to be a problem, please hang on while we look into it!
             </div>
         )
     }
