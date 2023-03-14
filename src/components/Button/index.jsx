@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 export default function Button({name, onClick}) { 
     return (
-        <button className="view-product-btn" onClick={onClick}>{name}</button>
+        <button className="btn" onClick={onClick}>{name}</button>
     )
 }
 
