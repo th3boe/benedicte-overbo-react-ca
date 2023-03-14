@@ -1,12 +1,12 @@
 .fixed-bottom {
     width: 100%;
-    position: fixed;
+    position: calc(60px + 100%);
     bottom: 0px;
-  }
+}
 
 footer {
     border-top: 1px solid #208888;
     padding: 10px;
     text-align: center;
     background-color: #116161;
-  }
+}
