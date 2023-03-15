@@ -7,6 +7,7 @@ import './home.m.css'
 
 const productUrl = 'https://api.noroff.dev/api/v1/online-shop';
 
+// Home Page function
 
 export default function HomePage() {
 
