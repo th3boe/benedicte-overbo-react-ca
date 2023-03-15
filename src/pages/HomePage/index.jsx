@@ -12,8 +12,8 @@ const productUrl = 'https://api.noroff.dev/api/v1/online-shop';
 export default function HomePage() {
 
     const [products, setProducts] = useState([]);
-    const [Loader, setLoader] = useState(false);
-    const [UpsError, setUpsError] = useState(false);
+    const [loader, setLoader] = useState(false);
+    const [upsError, setUpsError] = useState(false);
 
     const navigate = useNavigate()
     const handleOnClickProduct = (id) => {
@@ -43,13 +43,13 @@ export default function HomePage() {
 
 // Content for the above try and catch!
 
-    if(Loader) {
+    if(loader) {
         return (
             <div className='loader'></div>
         )
     }
 
-    if(UpsError) {
+    if(upsError) {
         return (
             <div className='error-message'>
                 Oh no.. There seems to be a problem, please hang on while we look into it!
