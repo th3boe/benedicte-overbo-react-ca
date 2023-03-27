@@ -22,7 +22,7 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="product/:id" element={<ProductPage />} />
-          <Route path="checkout" element={<CheckoutPage />} />
+          <Route path="cart" element={<CheckoutPage />} />
           <Route path="checkoutsuccess" element={<CheckoutSuccessPage />} />
         </Route>
       </Routes>

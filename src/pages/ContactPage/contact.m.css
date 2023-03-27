@@ -1,0 +1,19 @@
+form {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f5959;
+  border: 1px solid rgb(38, 141, 141);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
+}
+
+.form-input-size {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #208888;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
+  font-size: 15px;
+}

@@ -1,0 +1,38 @@
+.container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  padding: 30px;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  color: #2ec8c8;
+}
+
+a:hover {
+  font-style: italic;
+}
+
+.walking-seed {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .qty-counter {
+    display: flex;
+    align-items: center;
+  }
+}
