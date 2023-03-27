@@ -1,3 +1,11 @@
+.remove-product-x {
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  direction: rtl;
+}
+
 .no-cart-items,
 .center-title {
   text-align: center;
@@ -35,6 +43,11 @@
 .justify-cart-items {
   flex-direction: column;
   text-align: center;
+}
+
+.price-display {
+  border-top: 1px dotted rgb(38, 141, 141);
+  width: 250px;
 }
 
 @media only screen and (min-width: 600px) {
