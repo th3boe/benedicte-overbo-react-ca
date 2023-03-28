@@ -9,7 +9,7 @@ export default function CheckoutPage() {
   const { cart, clearCart, add, remove, wifeSaidNo } = useCart();
 
   return (
-    <div>
+    <div className="cart-container">
       <h1 className="center-title">CART</h1>
       <div>
         {cart.length > 0 ? (
@@ -44,40 +44,44 @@ export default function CheckoutPage() {
                 );
               })}
             </div>
-            <div>
-              <p>
-                You save: ${" "}
-                {cart
-                  .reduce(
-                    (totalSaved, cart) =>
-                      totalSaved +
-                      (cart.price - cart.discountedPrice / cart.totalItems) *
-                        cart.totalItems,
-                    0
-                  )
-                  .toFixed(2)}
-              </p>
-              <p>Shipping: $ 0.00</p>
-            </div>
-            <div className="price-display">
-              <p>
-                Cart Total: ${" "}
-                {cart
-                  .reduce(
-                    (totalSum, cart) =>
-                      totalSum +
-                      (cart.discountedPrice / cart.totalItems) *
-                        cart.totalItems,
-                    0
-                  )
-                  .toFixed(2)}
-              </p>
-            </div>
-            <Button name={"Clear Cart"} onClick={clearCart} />
-            <Link to="/checkoutSuccess">
-              {" "}
-              <Button name={"Check Out"} onClick={clearCart} />
-            </Link>
+            <span className="center">
+              <div>
+                <p>
+                  You save: ${" "}
+                  {cart
+                    .reduce(
+                      (totalSaved, cart) =>
+                        totalSaved +
+                        (cart.price - cart.discountedPrice / cart.totalItems) *
+                          cart.totalItems,
+                      0
+                    )
+                    .toFixed(2)}
+                </p>
+                <p>Shipping: $ 0.00</p>
+              </div>
+              <div className="price-display">
+                <p>
+                  Cart Total: ${" "}
+                  {cart
+                    .reduce(
+                      (totalSum, cart) =>
+                        totalSum +
+                        (cart.discountedPrice / cart.totalItems) *
+                          cart.totalItems,
+                      0
+                    )
+                    .toFixed(2)}
+                </p>
+              </div>
+              <div>
+                <Button name={"Clear Cart"} onClick={clearCart} />
+                <Link to="/checkoutSuccess">
+                  {" "}
+                  <Button name={"Check Out"} onClick={clearCart} />
+                </Link>
+              </div>
+            </span>
           </>
         ) : (
           <div className="no-cart-items">

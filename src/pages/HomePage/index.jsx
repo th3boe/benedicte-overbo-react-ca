@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/";
+import { RiStarSFill } from "react-icons/ri";
+import { BiSearchAlt } from "react-icons/bi";
 import "./home.m.css";
 
 // URL
@@ -60,6 +62,9 @@ export default function HomePage() {
   return (
     <div>
       <div className="search-placement">
+        <label className="label-search">
+          <BiSearchAlt />
+        </label>
         <input
           type="search"
           placeholder="Search products.. "
@@ -76,6 +81,22 @@ export default function HomePage() {
             <div key={product.id} className="card">
               <h1 className="card-header">{product.title}</h1>
               <div className="card-content">
+                <div>
+                  {product.price === product.discountedPrice ? (
+                    ""
+                  ) : (
+                    <>
+                      <div className="percentage-home">
+                        {Math.round(
+                          ((product.price - product.discountedPrice) /
+                            product.price) *
+                            100
+                        )}{" "}
+                        % OFF
+                      </div>
+                    </>
+                  )}
+                </div>
                 <img
                   className="product-image"
                   src={product.imageUrl}
@@ -91,14 +112,6 @@ export default function HomePage() {
                         ${product.discountedPrice}{" "}
                       </span>
                       <span className="before-discount">${product.price}</span>
-                      <p>
-                        {Math.round(
-                          ((product.price - product.discountedPrice) /
-                            product.price) *
-                            100
-                        )}{" "}
-                        % OFF
-                      </p>
                     </>
                   )}
                 </div>
@@ -110,6 +123,13 @@ export default function HomePage() {
                   onClick={() => handleOnClickProduct(product.id)}
                 />
               </div>
+              <p className="card-footer">
+                <RiStarSFill />
+                <RiStarSFill />
+                <RiStarSFill />
+                <RiStarSFill />
+                <RiStarSFill /> ({product.rating})
+              </p>
             </div>
           ))}
       </div>

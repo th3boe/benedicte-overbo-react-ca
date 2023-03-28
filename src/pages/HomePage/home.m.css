@@ -11,6 +11,11 @@
   font-size: 15px;
 }
 
+.label-search {
+  margin: 5px;
+  font-size: 25px;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -36,11 +41,38 @@
   border-radius: 10px 10px 0px 0px;
   background-color: #0f5959;
   padding: 8px;
-  margin: 0;
+  margin-top: 0;
+}
+
+.card-footer {
+  font-size: 16px;
+  font-weight: 400;
+  border-top: 1px solid rgb(38, 141, 141);
+  border-radius: 0px 0px 10px 10px;
+  background-color: #0f5959;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.percentage-home {
+  background-color: rgba(255, 0, 0, 0.934);
+  color: white;
+  font-size: 17px;
+  border: 1px solid rgb(107, 23, 23);
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  position: absolute;
+  margin-left: 15px;
+  float: left;
 }
 
 .product-image {
-  max-width: 200px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   margin: 10px auto;
   border: 1px solid black;
   border-radius: 10px;
@@ -48,7 +80,7 @@
 
 .before-discount {
   font-size: small;
-  text-decoration: line-through rgb(167, 9, 9);
+  text-decoration: line-through;
   margin-bottom: 0px;
 }
 
@@ -87,8 +119,7 @@
   margin: auto;
   padding: 10px;
   width: 380px;
-  color: rgb(116, 8, 8);
-  background-color: rgba(148, 5, 5, 0.303);
+  background-color: rgba(243, 7, 7, 0.934);
   border: 1px solid rgb(116, 8, 8);
   box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
   border-radius: 8px;

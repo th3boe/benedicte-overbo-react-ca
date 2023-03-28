@@ -1,7 +1,8 @@
-import { useEffect, useState, initialState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../../components/Button";
 import { useCart } from "../../hooks/useCart";
+import { RiStarSFill } from "react-icons/ri";
 import "./product.m.css";
 
 // Product Page function
@@ -102,11 +103,10 @@ export default function ProductPage() {
   return (
     <div>
       <div className="product-card">
-        <h1 className="card-header">{product.title}</h1>
-        <div className="product-card-content">
+        <h1 className="card-header">
           <div>
             {product.price === product.discountedPrice ? (
-              `$ ${product.price}`
+              ""
             ) : (
               <>
                 <div className="percentage">
@@ -120,13 +120,22 @@ export default function ProductPage() {
               </>
             )}
           </div>
-
+          {product.title}
+        </h1>
+        <div className="product-card-content">
           <img
             className="the-product-image"
             src={product.imageUrl}
             alt="Product"
           />
           <p>{product.description}</p>
+          <p>
+            <RiStarSFill />
+            <RiStarSFill />
+            <RiStarSFill />
+            <RiStarSFill />
+            <RiStarSFill /> ({product.rating})
+          </p>
 
           <div className="product-btn-price">
             <div className="product-price">
@@ -161,7 +170,13 @@ export default function ProductPage() {
                   <div>
                     <p className="review-header">{review.username}</p>
                     <p>{review.description}</p>
-                    <p className="review-bold">Rating: {review.rating} stars</p>
+                    <p>
+                      <RiStarSFill />
+                      <RiStarSFill />
+                      <RiStarSFill />
+                      <RiStarSFill />
+                      <RiStarSFill /> ({review.rating})
+                    </p>
                   </div>
                 </div>
               ))}

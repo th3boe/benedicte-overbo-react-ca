@@ -1,3 +1,8 @@
+.cart-container {
+  margin: 10px auto;
+  max-width: 700px;
+}
+
 .remove-product-x {
   font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -28,12 +33,14 @@
   background-color: #0f5959;
   border: 1px solid rgb(38, 141, 141);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
 }
 
 .cart-product-image {
   height: 100px;
+  width: 100px;
+  object-fit: cover;
   border: 1px solid rgb(38, 141, 141);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
   justify-content: left;
@@ -47,7 +54,10 @@
 
 .price-display {
   border-top: 1px dotted rgb(38, 141, 141);
-  width: 250px;
+}
+
+.center {
+  text-align: center;
 }
 
 @media only screen and (min-width: 600px) {

@@ -13,13 +13,12 @@ export default function CheckoutSuccessPage() {
           you might offically be poor again! The purchase is on it's way in a
           very earth-friendly way.
         </p>
-        <Link to="/">Return back to the store!</Link>
-      </div>
-      <div>
         <div>
-          <img className="walking-seed" src={Walker} alt="Logo" />
+          <Link to="/">Return back to the store!</Link>
         </div>
+        <img className="walking-seed" src={Walker} alt="eco-walker" />
       </div>
+      <div></div>
     </div>
   );
 }
