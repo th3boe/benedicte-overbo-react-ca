@@ -5,7 +5,7 @@ import "../../App.css";
 
 export default function Layout() {
   return (
-    <div>
+    <div className="layout">
       <Header />
       <main>
         <Outlet />
