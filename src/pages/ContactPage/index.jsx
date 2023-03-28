@@ -71,7 +71,7 @@ export default function ContactPage() {
 
   return (
     <div>
-      <form onSubmit={handleFormSubmit}>
+      <form className={styles.form} onSubmit={handleFormSubmit}>
         <label htmlFor="full-name">Full name</label>
         <input
           className={styles.inputSize}

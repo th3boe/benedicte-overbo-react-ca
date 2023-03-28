@@ -62,15 +62,17 @@ export default function HomePage() {
   return (
     <div>
       <div className={styles.searchPlacement}>
-        <label className={styles.labelSearch}>
-          <BiSearchAlt />
-        </label>
-        <input
-          type="search"
-          placeholder="Search products.. "
-          className={styles.searchSize}
-          onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
-        ></input>
+        <form>
+          <label className={styles.labelSearch}>
+            <BiSearchAlt />
+          </label>
+          <input
+            type="search"
+            placeholder="Search products.. "
+            className={styles.searchSize}
+            onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
+          ></input>
+        </form>
       </div>
       <div className={styles.cardContainer}>
         {products
