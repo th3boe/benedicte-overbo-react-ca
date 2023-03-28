@@ -1,35 +1,14 @@
-.cart-container {
+.container {
   margin: 10px auto;
   max-width: 700px;
 }
 
-.remove-product-x {
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  cursor: pointer;
-  direction: rtl;
-}
-
-.no-cart-items,
-.center-title {
+.justifyCartItems {
+  flex-direction: column;
   text-align: center;
 }
 
-.qty-counter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.qty-number {
-  border: 1px solid white;
-  padding: 10px;
-  width: 20px;
-  text-align: center;
-}
-
-.cart-card {
+.card {
   background-color: #0f5959;
   border: 1px solid rgb(38, 141, 141);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
@@ -37,7 +16,7 @@
   padding: 10px;
 }
 
-.cart-product-image {
+.productImage {
   height: 100px;
   width: 100px;
   object-fit: cover;
@@ -47,27 +26,48 @@
   margin: 15px;
 }
 
-.justify-cart-items {
-  flex-direction: column;
+.removeProductBtn {
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  direction: rtl;
+}
+
+.emptyCart,
+.title {
   text-align: center;
 }
 
-.price-display {
+.qtyCounter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qtyNumber {
+  border: 1px solid white;
+  padding: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.priceDisplay {
   border-top: 1px dotted rgb(38, 141, 141);
 }
 
-.center {
+.cartBottomCenter {
   text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
-  .justify-cart-items {
+  .justifyCartItems {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .qty-counter {
+  .qtyCounter {
     display: flex;
     align-items: center;
   }

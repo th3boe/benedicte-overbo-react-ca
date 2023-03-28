@@ -1,7 +1,7 @@
-import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
-import "./checkout.m.css";
+import Button from "../../components/Button";
+import styles from "./checkout.module.css";
 
 // Function getting information from useCart hook containing "if" statement showing either "products if added to cart" or the statement "No items in the cart yet."
 
@@ -9,8 +9,8 @@ export default function CheckoutPage() {
   const { cart, clearCart, add, remove, wifeSaidNo } = useCart();
 
   return (
-    <div className="cart-container">
-      <h1 className="center-title">CART</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>CART</h1>
       <div>
         {cart.length > 0 ? (
           <>
@@ -20,23 +20,23 @@ export default function CheckoutPage() {
                   (addedProducts) => addedProducts === id
                 );
                 return (
-                  <div className="cart-card">
-                    <div className="remove-product-x">
+                  <div className={styles.card}>
+                    <div className={styles.removeProductBtn}>
                       <div onClick={() => wifeSaidNo(product.id)}>X</div>
                     </div>
-                    <div className="justify-cart-items">
+                    <div className={styles.justifyCartItems}>
                       <img
-                        className="cart-product-image"
+                        className={styles.productImage}
                         src={product.imageUrl}
-                        alt="Product"
+                        alt={product.title}
                       />
                       <div>
                         <h2>{product.title}</h2>
                         <p>$ {product.discountedPrice}</p>
                       </div>
-                      <div className="qty-counter">
+                      <div className={styles.qtyCounter}>
                         <Button name={"-"} onClick={() => remove(product.id)} />
-                        <p className="qty-number">{product.totalItems}</p>
+                        <p className={styles.qtyNumber}>{product.totalItems}</p>
                         <Button name={"+"} onClick={() => add(product.id)} />
                       </div>
                     </div>
@@ -44,7 +44,7 @@ export default function CheckoutPage() {
                 );
               })}
             </div>
-            <span className="center">
+            <span className={styles.cartBottomCenter}>
               <div>
                 <p>
                   You save: ${" "}
@@ -60,7 +60,7 @@ export default function CheckoutPage() {
                 </p>
                 <p>Shipping: $ 0.00</p>
               </div>
-              <div className="price-display">
+              <div className={styles.priceDisplay}>
                 <p>
                   Cart Total: ${" "}
                   {cart
@@ -84,11 +84,9 @@ export default function CheckoutPage() {
             </span>
           </>
         ) : (
-          <div className="no-cart-items">
+          <div className={styles.emptyCart}>
             <p>You currently have no items in the cart.</p>
-            <Link to="/" className="cart-link">
-              Return back to the store!
-            </Link>
+            <Link to="/">Return back to the store!</Link>
           </div>
         )}
       </div>
