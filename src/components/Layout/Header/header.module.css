@@ -75,7 +75,7 @@ li a:hover {
 /* responsive nav */
 
 @media only screen and (min-width: 600px) {
-  .navLogo {
+  .headerContentDisplay {
     flex-direction: row;
     justify-content: space-between;
   }
