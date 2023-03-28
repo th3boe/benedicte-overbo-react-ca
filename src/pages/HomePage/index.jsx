@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button/";
 import { RiStarSFill } from "react-icons/ri";
 import { BiSearchAlt } from "react-icons/bi";
-import "./home.m.css";
+import Button from "../../components/Button/";
+import styles from "./home.module.css";
 
 // URL
 
@@ -45,12 +45,12 @@ export default function HomePage() {
   // Content for the above try and catch!
 
   if (loader) {
-    return <div className="loader"></div>;
+    return <div className={styles.loader}></div>;
   }
 
   if (upsError) {
     return (
-      <div className="error-message">
+      <div className={styles.errorMessage}>
         Oh no.. There seems to be a problem, please hang on while we look into
         it!
       </div>
@@ -61,32 +61,32 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="search-placement">
-        <label className="label-search">
+      <div className={styles.searchPlacement}>
+        <label className={styles.labelSearch}>
           <BiSearchAlt />
         </label>
         <input
           type="search"
           placeholder="Search products.. "
-          className="search-size"
+          className={styles.searchSize}
           onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
         ></input>
       </div>
-      <div className="card-container">
+      <div className={styles.cardContainer}>
         {products
           .filter((product) =>
             product.title.toLowerCase().includes(searchValue)
           )
           .map((product) => (
-            <div key={product.id} className="card">
-              <h1 className="card-header">{product.title}</h1>
-              <div className="card-content">
+            <div key={product.id} className={styles.card}>
+              <h1 className={styles.cardHeader}>{product.title}</h1>
+              <div className={styles.cardContent}>
                 <div>
                   {product.price === product.discountedPrice ? (
                     ""
                   ) : (
                     <>
-                      <div className="percentage-home">
+                      <div className={styles.percentage}>
                         {Math.round(
                           ((product.price - product.discountedPrice) /
                             product.price) *
@@ -98,9 +98,9 @@ export default function HomePage() {
                   )}
                 </div>
                 <img
-                  className="product-image"
+                  className={styles.productImage}
                   src={product.imageUrl}
-                  alt="Product"
+                  alt={product.title}
                 />
 
                 <div>
@@ -108,22 +108,24 @@ export default function HomePage() {
                     `$ ${product.price}`
                   ) : (
                     <>
-                      <span className="discount">
+                      <span className={styles.discount}>
                         ${product.discountedPrice}{" "}
                       </span>
-                      <span className="before-discount">${product.price}</span>
+                      <span className={styles.beforeDiscount}>
+                        ${product.price}
+                      </span>
                     </>
                   )}
                 </div>
               </div>
 
-              <div className="card-bottom">
+              <div>
                 <Button
                   name={"View Product"}
                   onClick={() => handleOnClickProduct(product.id)}
                 />
               </div>
-              <p className="card-footer">
+              <p className={styles.cardFooter}>
                 <RiStarSFill />
                 <RiStarSFill />
                 <RiStarSFill />

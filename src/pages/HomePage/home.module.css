@@ -1,9 +1,9 @@
-.search-placement {
+.searchPlacement {
   text-align: center;
   margin: 20px;
 }
 
-.search-size {
+.searchSize {
   width: 90%;
   padding: 8px;
   border: 1px solid #208888;
@@ -11,12 +11,12 @@
   font-size: 15px;
 }
 
-.label-search {
+.labelSearch {
   margin: 5px;
   font-size: 25px;
 }
 
-.card-container {
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -34,7 +34,7 @@
   width: 300px;
 }
 
-.card-header {
+.cardHeader {
   font-size: 22px;
   font-weight: 400;
   border-bottom: 1px solid rgb(38, 141, 141);
@@ -44,7 +44,7 @@
   margin-top: 0;
 }
 
-.card-footer {
+.cardFooter {
   font-size: 16px;
   font-weight: 400;
   border-top: 1px solid rgb(38, 141, 141);
@@ -54,7 +54,7 @@
   margin-bottom: 0;
 }
 
-.percentage-home {
+.percentage {
   background-color: rgba(255, 0, 0, 0.934);
   color: white;
   font-size: 17px;
@@ -69,7 +69,7 @@
   float: left;
 }
 
-.product-image {
+.productImage {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -78,7 +78,7 @@
   border-radius: 10px;
 }
 
-.before-discount {
+.beforeDiscount {
   font-size: small;
   text-decoration: line-through;
   margin-bottom: 0px;
@@ -87,10 +87,6 @@
 .discount {
   color: rgb(61, 194, 61);
 }
-
-/* .card-bottom {
-    position: bottom;
-} */
 
 /* loader and error */
 
@@ -114,7 +110,7 @@
   }
 }
 
-.error-message {
+.errorMessage {
   text-align: center;
   margin: auto;
   padding: 10px;
