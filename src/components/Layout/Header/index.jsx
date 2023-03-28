@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { useCart } from "../../../hooks/useCart";
 import { Link } from "react-router-dom";
-import Logo from "../../../images/logo.png";
 import { BsCart2 } from "react-icons/bs";
-import "../Header/header.m.css";
+import Logo from "../../../images/logo.png";
+import styles from "./header.module.css";
 
 function Nav() {
   return (
@@ -20,15 +19,15 @@ function Nav() {
   );
 }
 
-function NavCart() {
-  const { cart, products } = useCart();
+function CartIcon() {
+  const { cart } = useCart();
   return (
     <nav>
       <ul>
-        <li className="cart-li">
-          <Link to="/cart" className="cart-nav">
+        <li className={styles.cartLink}>
+          <Link to="/cart" className={styles.cartNav}>
             <BsCart2 />
-            <span className="cart-number">
+            <span className={styles.cartTotalItems}>
               {cart.reduce((totalQty, cart) => totalQty + cart.totalItems, 0)}
             </span>
           </Link>
@@ -39,22 +38,14 @@ function NavCart() {
 }
 
 export default function Header() {
-  // const [cartCounter, setCartCounter] = useState(0);
-
-  // const cartCount = () => {
-  //   const productsIncart = JSON.parse(localStorage.getItem("CART"));
-  //   console.log("item: ", productsIncart);
-  //   // setCartCounter(cartCounter + 1);
-  //   return productsIncart.count;
-  // };
-
   return (
-    <header className="fixed-top">
-      <div className="nav-logo">
-        <img className="logo" src={Logo} alt="Logo" />
+    <header className={styles.fixedTop}>
+      <div className={styles.headerContentDisplay}>
+        <Link to="/">
+          <img className={styles.logo} src={Logo} alt="Logo" />
+        </Link>
         <Nav />
-        <NavCart />
-        {/* <p>Produkter i handlekurv: </p> */}
+        <CartIcon />
       </div>
     </header>
   );
