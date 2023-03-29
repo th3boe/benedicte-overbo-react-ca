@@ -1,3 +1,8 @@
+.title {
+  text-align: center;
+  margin: 20px auto;
+}
+
 .form {
   width: 80%;
   margin: 10px auto;

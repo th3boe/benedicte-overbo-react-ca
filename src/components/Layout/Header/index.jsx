@@ -41,9 +41,7 @@ export default function Header() {
   return (
     <header className={styles.fixedTop}>
       <div className={styles.headerContentDisplay}>
-        <Link to="/">
-          <img className={styles.logo} src={Logo} alt="Logo" />
-        </Link>
+        <img className={styles.logo} src={Logo} alt="ECom-Logo" />
         <Nav />
         <CartIcon />
       </div>

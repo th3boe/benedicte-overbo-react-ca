@@ -71,11 +71,12 @@ export default function ContactPage() {
 
   return (
     <div>
+      <h1 className={styles.title}>Contact Us!</h1>
       <form className={styles.form} onSubmit={handleFormSubmit}>
         <label htmlFor="full-name">Full name</label>
         <input
           className={styles.inputSize}
-          name="full-name"
+          id="full-name"
           value={fullName}
           placeholder="Enter your full name"
           onChange={handleInputChange}
@@ -89,7 +90,7 @@ export default function ContactPage() {
         <label htmlFor="subject">Subject title</label>
         <input
           className={styles.inputSize}
-          name="subject"
+          id="subject"
           value={subject}
           placeholder="Enter a subject title"
           onChange={handleInputChange}
@@ -103,7 +104,7 @@ export default function ContactPage() {
         <label htmlFor="email">Email</label>
         <input
           className={styles.inputSize}
-          name="email"
+          id="email"
           value={email}
           placeholder="Enter your email"
           onChange={handleInputChange}
@@ -117,7 +118,7 @@ export default function ContactPage() {
         <label htmlFor="body">Description</label>
         <input
           className={styles.inputSize}
-          name="body"
+          id="body"
           value={body}
           placeholder="What are you thinking about?"
           onChange={handleInputChange}
