@@ -1,9 +1,13 @@
 body {
   background-color: #116161;
   color: white;
+}
+
+.layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 main {

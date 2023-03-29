@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../../components/Button";
-import "./contact.m.css";
+import styles from "./contact.module.css";
 
 export default function ContactPage() {
   const [fullName, setFullName] = useState("");
@@ -70,11 +70,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="form-container">
-      <form onSubmit={handleFormSubmit}>
+    <div>
+      <form className={styles.form} onSubmit={handleFormSubmit}>
         <label htmlFor="full-name">Full name</label>
         <input
-          className="form-input-size"
+          className={styles.inputSize}
           name="full-name"
           value={fullName}
           placeholder="Enter your full name"
@@ -83,12 +83,12 @@ export default function ContactPage() {
         />
 
         {formErrors.fullName && (
-          <div className="error-message">{formErrors.fullName}</div>
+          <div className={styles.errorMessage}>{formErrors.fullName}</div>
         )}
 
         <label htmlFor="subject">Subject title</label>
         <input
-          className="form-input-size"
+          className={styles.inputSize}
           name="subject"
           value={subject}
           placeholder="Enter a subject title"
@@ -97,12 +97,12 @@ export default function ContactPage() {
         />
 
         {formErrors.subject && (
-          <div className="error-message">{formErrors.subject}</div>
+          <div className={styles.errorMessage}>{formErrors.subject}</div>
         )}
 
         <label htmlFor="email">Email</label>
         <input
-          className="form-input-size"
+          className={styles.inputSize}
           name="email"
           value={email}
           placeholder="Enter your email"
@@ -111,12 +111,12 @@ export default function ContactPage() {
         />
 
         {formErrors.email && (
-          <div className="error-message">{formErrors.email}</div>
+          <div className={styles.errorMessage}>{formErrors.email}</div>
         )}
 
         <label htmlFor="body">Description</label>
         <input
-          className="form-input-size"
+          className={styles.inputSize}
           name="body"
           value={body}
           placeholder="What are you thinking about?"
@@ -125,7 +125,7 @@ export default function ContactPage() {
         />
 
         {formErrors.body && (
-          <div className="error-message">{formErrors.body}</div>
+          <div className={styles.errorMessage}>{formErrors.body}</div>
         )}
 
         <Button name={"Submit"} />

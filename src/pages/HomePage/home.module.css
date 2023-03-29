@@ -1,9 +1,9 @@
-.search-placement {
+.searchPlacement {
   text-align: center;
   margin: 20px;
 }
 
-.search-size {
+.searchSize {
   width: 90%;
   padding: 8px;
   border: 1px solid #208888;
@@ -11,7 +11,12 @@
   font-size: 15px;
 }
 
-.card-container {
+.labelSearch {
+  margin: 5px;
+  font-size: 25px;
+}
+
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -29,36 +34,59 @@
   width: 300px;
 }
 
-.card-header {
+.cardHeader {
   font-size: 22px;
   font-weight: 400;
   border-bottom: 1px solid rgb(38, 141, 141);
   border-radius: 10px 10px 0px 0px;
   background-color: #0f5959;
   padding: 8px;
-  margin: 0;
+  margin-top: 0;
 }
 
-.product-image {
-  max-width: 200px;
+.cardFooter {
+  font-size: 16px;
+  font-weight: 400;
+  border-top: 1px solid rgb(38, 141, 141);
+  border-radius: 0px 0px 10px 10px;
+  background-color: #0f5959;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.percentage {
+  background-color: rgba(255, 0, 0, 0.934);
+  color: white;
+  font-size: 17px;
+  border: 1px solid rgb(107, 23, 23);
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  position: absolute;
+  margin-left: 15px;
+  float: left;
+}
+
+.productImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   margin: 10px auto;
   border: 1px solid black;
   border-radius: 10px;
 }
 
-.before-discount {
+.beforeDiscount {
   font-size: small;
-  text-decoration: line-through rgb(167, 9, 9);
+  text-decoration: line-through;
   margin-bottom: 0px;
 }
 
 .discount {
   color: rgb(61, 194, 61);
 }
-
-/* .card-bottom {
-    position: bottom;
-} */
 
 /* loader and error */
 
@@ -82,13 +110,12 @@
   }
 }
 
-.error-message {
+.errorMessage {
   text-align: center;
   margin: auto;
   padding: 10px;
   width: 380px;
-  color: rgb(116, 8, 8);
-  background-color: rgba(148, 5, 5, 0.303);
+  background-color: rgba(243, 7, 7, 0.934);
   border: 1px solid rgb(116, 8, 8);
   box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
   border-radius: 8px;

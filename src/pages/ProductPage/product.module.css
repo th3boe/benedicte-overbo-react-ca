@@ -1,0 +1,137 @@
+/* product section css */
+
+.productCard {
+  background-color: #116161;
+  border: 1px solid rgb(38, 141, 141);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  margin: 10px auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+.percentage {
+  float: left;
+  position: absolute;
+  transform: rotate(-30deg);
+  font-size: large;
+  background-color: red;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border: 1px solid rgb(107, 23, 23);
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.cardHeader {
+  font-size: 22px;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(38, 141, 141);
+  border-radius: 10px 10px 0px 0px;
+  background-color: #0f5959;
+  padding: 8px;
+  margin-top: 0;
+}
+
+.productImage {
+  height: 50vmin;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.productCardContent {
+  padding: 5px;
+}
+
+.productCardFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #0f5959;
+  border: 1px solid rgb(38, 141, 141);
+  border-radius: 00px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  margin: 5px;
+}
+
+.beforeDiscount {
+  font-size: small;
+  text-decoration: line-through;
+  margin-bottom: 0px;
+}
+
+.discount {
+  color: rgb(61, 194, 61);
+}
+
+/* review section css */
+
+.review {
+  margin-top: 40px;
+}
+
+.reviewTitle {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.reviewCard {
+  background-color: #0f5959;
+  border: 1px solid rgb(38, 141, 141);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  max-width: 700px;
+}
+
+.reviewHeader {
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(38, 141, 141);
+  background-color: #0f5959;
+  padding: 8px;
+  margin: 0;
+}
+
+.noReview {
+  text-align: center;
+}
+
+/* loader and error */
+
+.loader {
+  margin: auto;
+  border: 10px solid rgb(38, 141, 141);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
+  border-radius: 50%;
+  border-top: 10px solid #116161;
+  width: 100px;
+  height: 100px;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorMessage {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  width: 380px;
+  background-color: rgba(243, 7, 7, 0.934);
+  border: 1px solid rgb(116, 8, 8);
+  box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
+  border-radius: 8px;
+}

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import Walker from "../../images/ cute-walker.gif";
-import "./checkoutsuccess.m.css";
+import styles from "./checkoutsuccess.module.css";
 
 export default function CheckoutSuccessPage() {
   return (
-    <div className="container">
-      <div className="text">
+    <div className={styles.container}>
+      <div className={styles.text}>
         <h1>WoopWoop, success!!</h1>
         <p>Payday?</p>
         <p>
@@ -13,13 +13,12 @@ export default function CheckoutSuccessPage() {
           you might offically be poor again! The purchase is on it's way in a
           very earth-friendly way.
         </p>
-        <Link to="/">Return back to the store!</Link>
-      </div>
-      <div>
         <div>
-          <img className="walking-seed" src={Walker} alt="Logo" />
+          <Link to="/">Return back to the store!</Link>
         </div>
+        <img className={styles.walkingSeed} src={Walker} alt="eco-walker" />
       </div>
+      <div></div>
     </div>
   );
 }

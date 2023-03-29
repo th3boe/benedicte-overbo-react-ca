@@ -1,8 +1,9 @@
-import { useEffect, useState, initialState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Button from "../../components/Button";
 import { useCart } from "../../hooks/useCart";
-import "./product.m.css";
+import { RiStarSFill } from "react-icons/ri";
+import Button from "../../components/Button";
+import styles from "./product.module.css";
 
 // Product Page function
 
@@ -44,72 +45,30 @@ export default function ProductPage() {
   // Content for the above try and catch!
 
   if (loader || !product) {
-    return <div className="loader"></div>;
+    return <div className={styles.loader}></div>;
   }
 
   if (upsError) {
     return (
-      <div className="error-message">
+      <div className={styles.errorMessage}>
         Oh no.. There seems to be a problem, please hang on while we look into
         it!
       </div>
     );
   }
 
-  // useEffect(() => {
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  // }, [cart]);
-
-  // const handleAddToCart = () => {
-  //   console.log("hei");
-  //   const cart = localStorage.getItem("cart");
-
-  // useEffect(() => {
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  // }, [cart]);
-
-  // if (cart) {
-  //   return JSON.parse(cart);
-  // } else {
-  //   return initialState;
-  // }
-  // const arrayy = [];
-  // Array.push.apply(arrayy, itemsFromStorage);
-  // console.log(
-  //   "array: ",
-  //   arrayy,
-  //   "itemInStorage: ",
-  //   itemsFromStorage,
-  //   "product: ",
-  //   product
-  // );
-  // const newList = itemsFromStorage.concat(product);
-  // console.log("add ", newList);
-  // localStorage.setItem("CART", JSON.stringify(product));
-  // console.log(itemsFromStorage);
-  // };
-
-  // const addToCart = product.id;
-
-  // useEffect(() => {
-  //   commerce.cart.retrieve().then((res) => {
-  //     setCart(res);
-  //   });
-  // }, []);
-
   // Product Page content!
 
   return (
     <div>
-      <div className="product-card">
-        <h1 className="card-header">{product.title}</h1>
-        <div className="product-card-content">
+      <div className={styles.productCard}>
+        <h1 className={styles.cardHeader}>
           <div>
             {product.price === product.discountedPrice ? (
-              `$ ${product.price}`
+              ""
             ) : (
               <>
-                <div className="percentage">
+                <div className={styles.percentage}>
                   {Math.round(
                     ((product.price - product.discountedPrice) /
                       product.price) *
@@ -120,27 +79,36 @@ export default function ProductPage() {
               </>
             )}
           </div>
-
+          {product.title}
+        </h1>
+        <div className={styles.productCardContent}>
           <img
-            className="the-product-image"
+            className={styles.productImage}
             src={product.imageUrl}
-            alt="Product"
+            alt={product.title}
           />
           <p>{product.description}</p>
+          <p>
+            <RiStarSFill />
+            <RiStarSFill />
+            <RiStarSFill />
+            <RiStarSFill />
+            <RiStarSFill /> ({product.rating})
+          </p>
 
-          <div className="product-btn-price">
-            <div className="product-price">
+          <div className={styles.productCardFooter}>
+            <div className={styles.productPrice}>
               {product.price === product.discountedPrice ? (
                 `$ ${product.price}`
               ) : (
                 <div>
-                  <p className="before-discount">$ {product.price}</p>ON SALE,
-                  NOW ONLY
-                  <p className="discount">$ {product.discountedPrice}</p>
+                  <p className={styles.beforeDiscount}>$ {product.price}</p>ON
+                  SALE, NOW ONLY
+                  <p className={styles.discount}>$ {product.discountedPrice}</p>
                 </div>
               )}
             </div>
-            <div className="add-to-cart-btn">
+            <div>
               <Button
                 name={"Add to cart"}
                 onClick={() => HandleAddToCartButton()}
@@ -150,24 +118,32 @@ export default function ProductPage() {
         </div>
       </div>
 
-      <div className="review">
-        <h2 className="review-header-card">Product Reviews</h2>
+      <div className={styles.review}>
+        <h2 className={styles.reviewTitle}>Product Reviews</h2>
 
         <div>
           {product.reviews.length > 0 ? (
             <>
               {product.reviews.map((review) => (
-                <div key={review.id} className="review-card">
+                <div key={review.id} className={styles.reviewCard}>
                   <div>
-                    <p className="review-header">{review.username}</p>
+                    <p className={styles.reviewHeader}>{review.username}</p>
                     <p>{review.description}</p>
-                    <p className="review-bold">Rating: {review.rating} stars</p>
+                    <p>
+                      <RiStarSFill />
+                      <RiStarSFill />
+                      <RiStarSFill />
+                      <RiStarSFill />
+                      <RiStarSFill /> ({review.rating})
+                    </p>
                   </div>
                 </div>
               ))}
             </>
           ) : (
-            <p className="review-card">No product reviews yet!</p>
+            <p className={styles.noReview}>
+              There seems to be no product reviews yet.
+            </p>
           )}
         </div>
       </div>

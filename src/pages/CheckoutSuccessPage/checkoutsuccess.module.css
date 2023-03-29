@@ -2,7 +2,6 @@
   text-align: center;
   display: flex;
   align-items: center;
-  flex-direction: column;
 }
 
 .text {
@@ -19,8 +18,8 @@ a:hover {
   font-style: italic;
 }
 
-.walking-seed {
-  width: 100%;
+.walkingSeed {
+  max-width: 200px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -28,11 +27,8 @@ a:hover {
     text-align: center;
     display: flex;
     align-items: center;
-    flex-direction: row;
-  }
-
-  .qty-counter {
-    display: flex;
-    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    margin: 10px auto;
   }
 }
