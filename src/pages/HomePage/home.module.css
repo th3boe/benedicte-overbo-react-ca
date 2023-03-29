@@ -1,3 +1,17 @@
+.visuallyHidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .searchPlacement {
   text-align: center;
   margin: 20px;
@@ -56,7 +70,6 @@
 
 .percentage {
   background-color: rgba(255, 0, 0, 0.934);
-  color: white;
   font-size: 17px;
   border: 1px solid rgb(107, 23, 23);
   border-radius: 50%;
@@ -85,7 +98,7 @@
 }
 
 .discount {
-  color: rgb(61, 194, 61);
+  color: #9ee0a1;
 }
 
 /* loader and error */

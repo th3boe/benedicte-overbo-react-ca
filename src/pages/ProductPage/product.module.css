@@ -15,7 +15,7 @@
   position: absolute;
   transform: rotate(-30deg);
   font-size: large;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.934);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
   border: 1px solid rgb(107, 23, 23);
   border-radius: 50px;
@@ -65,7 +65,7 @@
 }
 
 .discount {
-  color: rgb(61, 194, 61);
+  color: #7fd77f;
 }
 
 /* review section css */
@@ -130,7 +130,7 @@
   margin: auto;
   padding: 10px;
   width: 380px;
-  background-color: rgba(243, 7, 7, 0.934);
+  background-color: rgba(255, 0, 0, 0.934);
   border: 1px solid rgb(116, 8, 8);
   box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
   border-radius: 8px;
