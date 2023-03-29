@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Walker from "../../images/ cute-walker.gif";
 import styles from "./checkoutsuccess.module.css";
@@ -5,6 +6,9 @@ import styles from "./checkoutsuccess.module.css";
 export default function CheckoutSuccessPage() {
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>E-com | Success</title>
+      </Helmet>
       <div className={styles.text}>
         <h1>WoopWoop, success!!</h1>
         <p>Payday?</p>

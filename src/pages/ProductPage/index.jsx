@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
@@ -61,6 +62,10 @@ export default function ProductPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>E-com | {product.title}</title>
+      </Helmet>
+      ;
       <div className={styles.productCard}>
         <h1 className={styles.cardHeader}>
           <div>
@@ -117,7 +122,6 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
-
       <div className={styles.review}>
         <h2 className={styles.reviewTitle}>Product Reviews</h2>
 

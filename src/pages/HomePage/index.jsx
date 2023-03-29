@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { RiStarSFill } from "react-icons/ri";
@@ -61,6 +62,13 @@ export default function HomePage() {
 
   return (
     <div>
+      <Helmet>
+        <title>E-com | Home</title>
+      </Helmet>
+      <div className={styles.title}>
+        <h1>Bored at night?</h1>
+        <p>No worries you can shop alot of exciting stuff below here..</p>
+      </div>
       <div className={styles.searchPlacement}>
         <form>
           <label className={styles.labelSearch} for="search" alt="search-icon">
@@ -83,7 +91,7 @@ export default function HomePage() {
           )
           .map((product) => (
             <div key={product.id} className={styles.card}>
-              <h1 className={styles.cardHeader}>{product.title}</h1>
+              <h2 className={styles.cardHeader}>{product.title}</h2>
               <div className={styles.cardContent}>
                 <div>
                   {product.price === product.discountedPrice ? (

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
 import Button from "../../components/Button";
@@ -10,6 +11,9 @@ export default function CheckoutPage() {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>E-com | Cart</title>
+      </Helmet>
       <h1 className={styles.title}>CART</h1>
       <div>
         {cart.length > 0 ? (

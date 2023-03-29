@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import Button from "../../components/Button";
 import styles from "./contact.module.css";
@@ -71,12 +72,16 @@ export default function ContactPage() {
 
   return (
     <div>
-      <h1 className={styles.title}>Contact Us!</h1>
+      <Helmet>
+        <title>E-com | Contact</title>
+      </Helmet>
+      ;<h1 className={styles.title}>Contact Us!</h1>
       <form className={styles.form} onSubmit={handleFormSubmit}>
         <label htmlFor="full-name">Full name</label>
         <input
           className={styles.inputSize}
           id="full-name"
+          name="full-name"
           value={fullName}
           placeholder="Enter your full name"
           onChange={handleInputChange}
@@ -91,6 +96,7 @@ export default function ContactPage() {
         <input
           className={styles.inputSize}
           id="subject"
+          name="subject"
           value={subject}
           placeholder="Enter a subject title"
           onChange={handleInputChange}
@@ -105,6 +111,7 @@ export default function ContactPage() {
         <input
           className={styles.inputSize}
           id="email"
+          name="email"
           value={email}
           placeholder="Enter your email"
           onChange={handleInputChange}
@@ -119,6 +126,7 @@ export default function ContactPage() {
         <input
           className={styles.inputSize}
           id="body"
+          name="body"
           value={body}
           placeholder="What are you thinking about?"
           onChange={handleInputChange}
