@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import Button from "../../components/Button";
 import styles from "./contact.module.css";
@@ -71,7 +72,10 @@ export default function ContactPage() {
 
   return (
     <div>
-      <h1 className={styles.title}>Contact Us!</h1>
+      <Helmet>
+        <title>E-com | Contact</title>
+      </Helmet>
+      ;<h1 className={styles.title}>Contact Us!</h1>
       <form className={styles.form} onSubmit={handleFormSubmit}>
         <label htmlFor="full-name">Full name</label>
         <input
