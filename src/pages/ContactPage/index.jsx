@@ -45,7 +45,7 @@ export default function ContactPage() {
           ? "Your subject title is required to be at least 3 characters"
           : "",
       email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-        ? "Invalid email address"
+        ? "You have entered an invalid email address"
         : "",
       body:
         body.length < 3
@@ -75,7 +75,7 @@ export default function ContactPage() {
       <Helmet>
         <title>E-com | Contact</title>
       </Helmet>
-      ;<h1 className={styles.title}>Contact Us!</h1>
+      <h1 className={styles.title}>Contact Us!</h1>
       <form className={styles.form} onSubmit={handleFormSubmit}>
         <label htmlFor="full-name">Full name</label>
         <input
@@ -85,7 +85,6 @@ export default function ContactPage() {
           value={fullName}
           placeholder="Enter your full name"
           onChange={handleInputChange}
-          required
         />
 
         {formErrors.fullName && (
@@ -100,7 +99,6 @@ export default function ContactPage() {
           value={subject}
           placeholder="Enter a subject title"
           onChange={handleInputChange}
-          required
         />
 
         {formErrors.subject && (
@@ -115,7 +113,6 @@ export default function ContactPage() {
           value={email}
           placeholder="Enter your email"
           onChange={handleInputChange}
-          required
         />
 
         {formErrors.email && (
@@ -123,14 +120,13 @@ export default function ContactPage() {
         )}
 
         <label htmlFor="body">Description</label>
-        <input
+        <textarea
           className={styles.inputSize}
           id="body"
           name="body"
           value={body}
           placeholder="What are you thinking about?"
           onChange={handleInputChange}
-          required
         />
 
         {formErrors.body && (

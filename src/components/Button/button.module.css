@@ -7,9 +7,12 @@
   margin: 10px;
   border-radius: 0px;
   font-size: 15px;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .btn:hover {
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 20px;
   color: white;
   border: 1px solid #208888;

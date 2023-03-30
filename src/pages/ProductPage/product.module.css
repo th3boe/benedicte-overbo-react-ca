@@ -42,20 +42,21 @@
   border-radius: 10px;
 }
 
-.productCardContent {
-  padding: 5px;
+.cardFooter {
+  font-size: 16px;
+  font-weight: 400;
+  border-top: 1px solid rgb(38, 141, 141);
+  border-radius: 0px 0px 10px 10px;
+  background-color: #0f5959;
+  padding: 10px;
+  margin-bottom: 0;
 }
 
-.productCardFooter {
+.contentCardFooter {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #0f5959;
-  border: 1px solid rgb(38, 141, 141);
-  border-radius: 00px 0px 10px 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
-  margin: 5px;
 }
 
 .beforeDiscount {
@@ -71,7 +72,7 @@
 /* review section css */
 
 .review {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .reviewTitle {
@@ -134,4 +135,29 @@
   border: 1px solid rgb(116, 8, 8);
   box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
   border-radius: 8px;
+}
+
+.addedSuccess {
+  position: absolute;
+  background-color: #579b57;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border: 1px solid #329232;
+  border-radius: 5px;
+  padding: 10px 5px;
+  margin: 0px auto;
+  text-align: center;
+  top: 50%;
+  width: 310px;
+  left: 50%;
+  margin-left: -155px;
+  animation: fader 2s linear forwards;
+}
+
+@keyframes fader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
