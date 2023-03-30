@@ -7,7 +7,6 @@
 header {
   border-bottom: 1px solid #208888;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
-  padding: 10px;
   background-color: #116161;
   text-align: center;
   align-items: center;
@@ -22,7 +21,7 @@ header {
 }
 
 .logo {
-  height: 20vmin;
+  height: 10vmin;
 }
 
 /* nav specific styling */
@@ -42,6 +41,8 @@ li a {
   padding: 10px 30px;
   margin: 10px;
   border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 li a:hover {
@@ -49,6 +50,7 @@ li a:hover {
   color: white;
   border: 1px solid #208888;
   background-color: #0e4d4d;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .cartLink a {
@@ -74,7 +76,7 @@ li a:hover {
 
 /* responsive nav */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 625px) {
   .headerContentDisplay {
     flex-direction: row;
     justify-content: space-between;
