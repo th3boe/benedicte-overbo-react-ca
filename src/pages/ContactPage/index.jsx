@@ -61,6 +61,10 @@ export default function ContactPage() {
       );
 
       console.log(customerForm);
+      setFullName("");
+      setSubject("");
+      setEmail("");
+      setBody("");
       setFormErrors({
         fullName: "",
         subject: "",
