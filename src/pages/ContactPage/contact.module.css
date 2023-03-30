@@ -15,19 +15,21 @@
 }
 
 .inputSize {
-  margin: 5px;
+  margin: 5px 5px 15px 5px;
   padding: 8px;
   border: 1px solid #208888;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.507);
   font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .errorMessage {
   text-align: center;
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;
-  width: 380px;
+  max-width: 380px;
   background-color: rgba(243, 7, 7, 0.934);
   border: 1px solid rgb(116, 8, 8);
   box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
