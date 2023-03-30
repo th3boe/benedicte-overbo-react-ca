@@ -12,13 +12,30 @@ export default function ProductPage() {
   const [product, setProduct] = useState(null);
   const [loader, setLoader] = useState(false);
   const [upsError, setUpsError] = useState(false);
+  const [addedProduct, setAddedProduct] = useState(false);
 
-  // const [cart, setCart] = useState();
+  // Function to add successMessage when product is added.
+
+  useEffect(() => {
+    let timeoutId;
+
+    if (addedProduct) {
+      timeoutId = setTimeout(() => {
+        setAddedProduct(false);
+      }, 2000);
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [addedProduct]);
 
   const { addToCart } = useCart();
   function HandleAddToCartButton() {
     addToCart(product);
+    const added = true;
+    setAddedProduct(added);
   }
+
+  // useEffect to find product that has been clicked!
 
   let { id } = useParams();
 
@@ -65,7 +82,6 @@ export default function ProductPage() {
       <Helmet>
         <title>E-com | {product.title}</title>
       </Helmet>
-      ;
       <div className={styles.productCard}>
         <h1 className={styles.cardHeader}>
           <div>
@@ -101,23 +117,34 @@ export default function ProductPage() {
             <RiStarSFill /> ({product.rating})
           </p>
 
-          <div className={styles.productCardFooter}>
-            <div className={styles.productPrice}>
-              {product.price === product.discountedPrice ? (
-                `$ ${product.price}`
-              ) : (
-                <div>
-                  <p className={styles.beforeDiscount}>$ {product.price}</p>ON
-                  SALE, NOW ONLY
-                  <p className={styles.discount}>$ {product.discountedPrice}</p>
-                </div>
-              )}
+          <div className={styles.cardFooter}>
+            <div className={styles.contentCardFooter}>
+              <div className={styles.productPrice}>
+                {product.price === product.discountedPrice ? (
+                  `$ ${product.price}`
+                ) : (
+                  <div>
+                    <p className={styles.beforeDiscount}>$ {product.price}</p>ON
+                    SALE, NOW ONLY
+                    <p className={styles.discount}>
+                      $ {product.discountedPrice}
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div>
+                <Button
+                  name={"Add to cart"}
+                  onClick={() => HandleAddToCartButton()}
+                />
+              </div>
             </div>
             <div>
-              <Button
-                name={"Add to cart"}
-                onClick={() => HandleAddToCartButton()}
-              />
+              {addedProduct ? (
+                <p className={styles.addedSuccess}>
+                  {product.title} added to cart
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

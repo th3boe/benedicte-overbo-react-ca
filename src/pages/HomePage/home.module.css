@@ -131,7 +131,7 @@
   text-align: center;
   margin: auto;
   padding: 10px;
-  width: 380px;
+  max-width: 380px;
   background-color: rgba(243, 7, 7, 0.934);
   border: 1px solid rgb(116, 8, 8);
   box-shadow: 2px 2px 4px 0 rgba(105, 1, 1, 0.363);
