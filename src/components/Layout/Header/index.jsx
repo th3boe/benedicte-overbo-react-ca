@@ -1,18 +1,40 @@
 import { useCart } from "../../../hooks/useCart";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
 import Logo from "../../../images/logo.png";
 import styles from "./header.module.css";
 
 function Nav() {
   return (
-    <nav>
+    <nav id="navigation">
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            to="/"
+            style={({ isActive }) => {
+              return {
+                borderRadius: isActive ? "20px" : "",
+                border: isActive ? "1px solid #208888" : "",
+                backgroundColor: isActive ? "#0e4d4d" : "",
+              };
+            }}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink
+            to="/contact"
+            style={({ isActive }) => {
+              return {
+                borderRadius: isActive ? "20px" : "",
+                border: isActive ? "1px solid #208888" : "",
+                backgroundColor: isActive ? "#0e4d4d" : "",
+              };
+            }}
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
@@ -25,12 +47,22 @@ function CartIcon() {
     <nav>
       <ul>
         <li className={styles.cartLink}>
-          <Link to="/cart" className={styles.cartNav}>
+          <NavLink
+            to="/cart"
+            className={styles.cartNav}
+            style={({ isActive }) => {
+              return {
+                borderRadius: isActive ? "20px" : "",
+                border: isActive ? "1px solid #208888" : "",
+                backgroundColor: isActive ? "#0e4d4d" : "",
+              };
+            }}
+          >
             <BsCart2 />
             <span className={styles.cartTotalItems}>
               {cart.reduce((totalQty, cart) => totalQty + cart.totalItems, 0)}
             </span>
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
