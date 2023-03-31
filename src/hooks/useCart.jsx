@@ -51,7 +51,7 @@ const useCartStore = create((set) => ({
       return { cart: newCart };
     }),
 
-  // removeQty used to decrease the quantity when clicking "-" button, and remove product quantity reaches 0
+  // removeQty used to decrease the quantity when clicking "-" button, and remove product when quantity reaches 0
 
   removeQty: (id) =>
     set((state) => {
