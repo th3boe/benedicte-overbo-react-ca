@@ -150,7 +150,7 @@
   width: 310px;
   left: 50%;
   margin-left: -155px;
-  animation: fader 2s linear forwards;
+  animation: fader 2.5s linear forwards;
 }
 
 @keyframes fader {

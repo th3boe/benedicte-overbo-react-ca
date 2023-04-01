@@ -6,18 +6,14 @@ import styles from "./header.module.css";
 
 function Nav() {
   return (
-    <nav id="navigation">
+    <nav>
       <ul>
         <li>
           <NavLink
             to="/"
-            style={({ isActive }) => {
-              return {
-                borderRadius: isActive ? "20px" : "",
-                border: isActive ? "1px solid #208888" : "",
-                backgroundColor: isActive ? "#0e4d4d" : "",
-              };
-            }}
+            className={(navigation) =>
+              navigation.isActive ? styles.active : ""
+            }
           >
             Home
           </NavLink>
@@ -25,13 +21,9 @@ function Nav() {
         <li>
           <NavLink
             to="/contact"
-            style={({ isActive }) => {
-              return {
-                borderRadius: isActive ? "20px" : "",
-                border: isActive ? "1px solid #208888" : "",
-                backgroundColor: isActive ? "#0e4d4d" : "",
-              };
-            }}
+            className={(navigation) =>
+              navigation.isActive ? styles.active : ""
+            }
           >
             Contact
           </NavLink>
@@ -50,13 +42,9 @@ function CartIcon() {
           <NavLink
             to="/cart"
             className={styles.cartNav}
-            style={({ isActive }) => {
-              return {
-                borderRadius: isActive ? "20px" : "",
-                border: isActive ? "1px solid #208888" : "",
-                backgroundColor: isActive ? "#0e4d4d" : "",
-              };
-            }}
+            className={(navigation) =>
+              navigation.isActive ? styles.active : ""
+            }
           >
             <BsCart2 />
             <span className={styles.cartTotalItems}>
