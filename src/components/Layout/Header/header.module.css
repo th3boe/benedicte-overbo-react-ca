@@ -45,9 +45,14 @@ li a {
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+li a.active {
+  border-radius: 20px;
+  border: 1px solid #208888;
+  background-color: #0e4d4d;
+}
+
 li a:hover {
   border-radius: 20px;
-  color: white;
   border: 1px solid #208888;
   background-color: #0e4d4d;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
