@@ -62,12 +62,6 @@ li a:hover {
   padding: 10px;
 }
 
-.cartNav {
-  height: 2rem;
-  width: 2rem;
-  position: relative;
-}
-
 .cartTotalItems {
   background-color: rgba(255, 0, 0, 0.934);
   color: white;

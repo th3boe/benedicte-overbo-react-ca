@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# Semester-Project-2-YSA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](/src/images/ecom-preview-image.png)
 
-## Available Scripts
+Above is a screenshot of the front page and cart page of e-commerce site, displaying products and cart items. This page was created as part of a course assignment on react.
 
-In the project directory, you can run:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b0bbdff6-5ce9-4b85-89dc-b19e3f7f973f/deploy-status)](https://app.netlify.com/sites/boe-com/deploys)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The e-commerce page was created as part of a course assignment on react. The given brief was to create a e-commerce site with product cards on the front page. The user should then be able to add items to cart when they have entered the specific product card.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+\*You are tasked with build out the following pages for an eCom store:
 
-### `npm test`
+1.Homepage
+2.Individual product page
+3.Cart page
+4.Checkout success page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There will also be a contact page which will contain a contact form with the following fields. There must be form validation:
 
-### `npm run build`
+1.Full name (Minimum number of characters is 3, required)
+2.Subject (Minimum number of characters is 3, required)
+3.Email (Must be a valid email address, required)
+4.Body (Minimum number of characters is 3, required)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The brief is much more in depth, but this is the requirements in short.\*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I wanted my e-commerce site to have calming colors and be something a bit different than the average black, white and grey online shopping site.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Built using CSS frameworks and React JS.
 
-### `npm run eject`
+## CheckList for delivery
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### The site must contain:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [x] On the homepage, loop through the products and display a Product component for each of the values. This Product component should look like a product card.
+- [x] The homepage should have a lookahead/auto-complete Search bar component. Typing values in the search bar should display products where the title matches the search input.
+- [x] On the ProductPage, use the ID of the product as the params for the dynamic segment. Add the product details as mentioned in the brief.
+- [x] Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart.
+- [x] Clicking on the Cart Icon component will take the user to the CheckoutPage page.
+- [x] The CheckoutPage must list all of the products in the cart, show a total at the bottom and a Checkout button.
+- [x] Clicking the Checkout button will take the user to the CheckoutSuccessPage.
+- [x] The CheckoutSuccessPage should display that the order was successful and clear the cart. There should be a link to go back to the store.
+- [x] On the ContactPage, create the given inputs, and console.log the data from the form.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### WCAG
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The website has been WCAG checked several times during the creation process. Some of what has been checked is the color palette and that the contrast is okay for people suffering from vision impairments. Alt text has also been added to images for when the page needs to be used with voiceover, for example "Siri".
 
-## Learn More
+This is just some of what has been checked, contrast and colors is a very important factor for a page to be useful for the average audience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Description
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### What went well on the project
 
-### Code Splitting
+React coding went surpisingly well for it to be the first time it was ever tested by me. I found the design process also ended with a very neat result.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Logo
 
-### Analyzing the Bundle Size
+The logo was built to be remembered and to be playful. The icon would attract the inner child of the adult using, and be easily remembered by kids. After all, when thinking of a good old fashioned Yard Sale most of us would think of the bright red wagon in a yard.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image](/src/images/logo.png)
 
-### Making a Progressive Web App
+### Design choice
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The design choice for this project was to keep it simple yet completely different from the ordinary online shopping site.
 
-### Advanced Configuration
+The chosen color palette was a calming green combined with white. I wanted the page to be easy on the eyes, while also having a design that was easy to navigate.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The breif asked for some specifics for the design, which was cart button with a number on the side that counts the amount of items added to cart, products displayed as cards, the product cards should display the correct percentage if the product is on sale. Lastly "add to cart" button on the specific product page.
 
-### Deployment
+I could not resist, so I added an animation that I created a while back to the success page for checkout.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### React
 
-### `npm run build` fails to minify
+The used JS type for this project was React. The react code was created using some online inspiration and inspiration from the modules from school.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+What I found was that react made a lot of functionality simpler. But also more complicated.
+
+### Built With
+
+- [REACT](https://react.dev/)
+- [Bootstrap](https://react-bootstrap.netlify.app/)
+
+## Getting Started
+
+### Installing
+
+The project repository can be cloned using this link:
+
+```bash
+git clone https://github.com/th3boe/Semester-Project-2-YSA.git
+```
+
+Which you can open using Visual Studio Code or another code editor.
+
+The repository has some connected dependencies which can be accessed using terminal:
+
+Install:
+
+```bash
+npm i
+```
+
+Run build and live-server:
+
+```bash
+npm run start
+```
+
+The API used for this brief is:
+
+https://api.noroff.dev/api/v1/online-shop
+
+### Contributing
+
+If someone would want to help with the project or collaborate on it, they could fork the repo, which could later be merged.
+
+### Contact
+
+If you want to get in contact with me (the developer), you can look me up on my animation portfolio or Linkedin page.
+
+[My Animation Portfolio](www.boe3am.com)
+
+[My LinkedIn page](https://www.linkedin.com/in/benedicte-%C3%B8verb%C3%B8-9b35b2162/)

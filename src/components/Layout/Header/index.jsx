@@ -41,7 +41,6 @@ function CartIcon() {
         <li className={styles.cartLink}>
           <NavLink
             to="/cart"
-            className={styles.cartNav}
             className={(navigation) =>
               navigation.isActive ? styles.active : ""
             }
