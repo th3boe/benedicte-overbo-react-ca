@@ -10,21 +10,21 @@ Above is a screenshot of the front page and cart page of e-commerce site, displa
 
 The e-commerce page was created as part of a course assignment on react. The given brief was to create a e-commerce site with product cards on the front page. The user should then be able to add items to cart when they have entered the specific product card.
 
-"You are tasked with build out the following pages for an eCom store:
+_"You are tasked with build out the following pages for an eCom store:_
 
-- 1.Homepage
-- 2.Individual product page
-- 3.Cart page
-- 4.Checkout success page
+1. Homepage
+2. Individual product page
+3. Cart page
+4. Checkout success page
 
-There will also be a contact page which will contain a contact form with the following fields. There must be form validation:
+_There will also be a contact page which will contain a contact form with the following fields. There must be form validation:_
 
-- 1.Full name (Minimum number of characters is 3, required)
-- 2.Subject (Minimum number of characters is 3, required)
-- 3.Email (Must be a valid email address, required)
-- 4.Body (Minimum number of characters is 3, required)
+1. Full name (Minimum number of characters is 3, required)
+2. Subject (Minimum number of characters is 3, required)
+3. Email (Must be a valid email address, required)
+4. Body (Minimum number of characters is 3, required)
 
-The brief is much more in depth, but this is the requirements in short."
+_The brief is much more in depth, but this is the requirements in short."_
 
 I wanted my e-commerce site to have calming colors and be something a bit different than the average black, white and grey online shopping site.
 
