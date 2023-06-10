@@ -90,7 +90,7 @@ What I found was that react made a lot of functionality simpler. But also more c
 The project repository can be cloned using this link:
 
 ```bash
-git clone https://github.com/th3boe/Semester-Project-2-YSA.git
+git clone https://github.com/th3boe/benedicte-overbo-react-ca.git
 ```
 
 Which you can open using Visual Studio Code or another code editor.
