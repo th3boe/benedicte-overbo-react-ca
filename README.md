@@ -1,4 +1,4 @@
-# Semester-Project-2-YSA
+# Course-Assignments-React-ECOM
 
 ![image](/src/images/ecom-preview-image.png)
 
